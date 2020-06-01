@@ -1,6 +1,6 @@
 package com.epam.stock.kafka;
 
-import com.epam.stock.dto.Check;
+import com.epam.stock.dto.ResultDto;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -25,8 +25,8 @@ public class ResultKafkaProducer {
   }
 
   @SneakyThrows
-  public void send(Check check) {
-    final String value = objectMapper.writeValueAsString(check);
+  public void send(ResultDto resultDto) {
+    final String value = objectMapper.writeValueAsString(resultDto);
     kafkaTemplate.send(new ProducerRecord<>(topic, value));
   }
 }

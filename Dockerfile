@@ -1,4 +1,6 @@
 FROM openjdk:11
+RUN apt-get update
+RUN apt-get install -y curl
 ENV APP_PATH=/app
 WORKDIR $APP_PATH
 COPY /build/libs/stock.jar ./

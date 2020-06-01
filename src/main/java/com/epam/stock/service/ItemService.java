@@ -7,4 +7,6 @@ public interface ItemService {
 
   boolean enoughItems(OrderDto order);
 
+  void updateStock(OrderDto orderDto);
+
 }

@@ -9,11 +9,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ItemDto {
 
-  private long itemId;
+  private Long itemId;
 
   private String itemName;
 
-  private int amount;
+  private Integer amount;
 
-  private double price;
+  private Double price;
 }
